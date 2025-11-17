@@ -13,46 +13,46 @@ body {
     background: linear-gradient(90deg, #e2e2e2, #c9d6ff);
 }
 
-/* MAIN CONTAINER */
 .container {
     position: relative;
     width: 850px;
-    height: auto; 
+    height: 700px;
     background: #fff;
     border-radius: 30px;
     box-shadow: 0 0 30px rgba(0,0,0,.2);
     overflow: hidden;
     margin: 10px;
-    display: flex;
 }
 
-/* sign up baks */
 .Signup-box {
-    position: relative; 
+    position: absolute;
+    right: 0;
+    height: 100%;
     width: 50%;
-    padding: 40px;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    color: #333;
+    text-align: center;
+    padding: 40px;
     z-index: 1;
 }
 
-/* form */
+/*Ispasyo*/
 form {
     width: 100%;
 }
-
+/*Login Text*/
 .container h1 {
     font-size: 36px;
     margin: -10px 0;
 }
-
-/* input field baks */
+/*Ispasyo between the username textbox and password textbox*/
 .input-group {
     position: relative;
     margin: 30px 0;
 }
 
+    /*for the input box align*/
     .input-group input {
         width: 100%;
         padding: 13px 50px 13px 20px;
@@ -70,7 +70,7 @@ form {
             font-weight: 400;
         }
 
-    /* icons */
+    /*Icons Alignment*/
     .input-group .icon {
         position: absolute;
         right: 20px;
@@ -80,9 +80,11 @@ form {
         font-size: 20px;
     }
 
-/* Agree terms  & Sign in Link*/
 .agreeterms-box {
     margin: -15px 0 15px;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
 .Already-Account-Link a {
@@ -96,7 +98,7 @@ form {
         color: #333;
     }
 
-/* BUTTON */
+/*Login button size and color */
 .btn {
     width: 100%;
     height: 48px;
@@ -110,55 +112,55 @@ form {
     font-weight: 600;
 }
 
-/* LOGO PANEL */
+.container p {
+    font-size: 14.5px;
+    margin: 15px 0;
+}
+
+    /* LEFT LOGO PANEL */
 .right-panel {
     width: 50%;
     height: 100%;
     position: relative;
 }
 
-.Logo-box {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: #7494ec;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    border-bottom-right-radius: 150px;
-    border-top-right-radius: 150px;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-}
+    .Logo-box {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #7494ec;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        border-bottom-right-radius: 150px;
+        border-top-right-radius: 150px;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+
 
 /* ============================
    RESPONSIVE DESIGN
    ============================ */
 
-/* TABLETS */
+/* For tablets and small laptops */
 @media (max-width: 992px) {
     .container {
         width: 90%;
-        flex-direction: column-reverse; /* FIX: panel on top or bottom */
+        height: auto;
     }
 
-    .Signup-box,
-    .right-panel {
-        width: 100%;
+    .Signup-box {
+        padding: 30px;
     }
 
     .container h1 {
         font-size: 30px;
     }
-
-    .Logo-box {
-        height: 250px;
-        border-radius: 0 0 30px 30px; /* FIX for tablet */
-    }
 }
 
-/* MOBILE */
+/* For phones (panel goes on top) */
 @media (max-width: 768px) {
 
     body {
@@ -167,19 +169,20 @@ form {
 
     .container {
         width: 95%;
-        flex-direction: column-reverse;
+        height: auto;
+        display: flex;
+        flex-direction: column;
     }
 
     .right-panel,
     .Signup-box {
         width: 100%;
-        height: auto;
         position: relative;
+        height: auto;
     }
 
     .Logo-box {
-        height: 220px;
-        border-radius: 0 0 30px 30px; /* FIX: remove curve */
+        border-radius: 0 0 30px 30px;
         padding: 40px 20px;
     }
 
@@ -197,7 +200,7 @@ form {
     }
 }
 
-/* VERY SMALL PHONES */
+/* For very small phones */
 @media (max-width: 480px) {
 
     .input-group input {
@@ -207,7 +210,6 @@ form {
 
     .Logo-box {
         padding: 30px 10px;
-        height: 180px;
     }
 
     .container h1 {
