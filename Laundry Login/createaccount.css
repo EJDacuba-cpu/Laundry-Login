@@ -1,0 +1,118 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #e2e2e2, #c9d6ff);
+}
+
+.container {
+    position: relative;
+    width: 850px;
+    height: 700px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(0,0,0,.2);
+    overflow: hidden;
+    margin: 10px;
+}
+
+.Signup-box {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-align: center;
+    padding: 40px;
+    z-index: 1;
+}
+
+/*Ispasyo*/
+form {
+    width: 100%;
+}
+/*Login Text*/
+.container h1 {
+    font-size: 36px;
+    margin: -10px 0;
+}
+/*Ispasyo between the username textbox and password textbox*/
+.input-group {
+    position: relative;
+    margin: 30px 0;
+}
+
+    /*for the input box align*/
+    .input-group input {
+        width: 100%;
+        padding: 13px 50px 13px 20px;
+        background: #eee;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        color: #333;
+        font-weight: 500;
+    }
+
+        .input-group input::placeholder {
+            color: #888;
+            font-weight: 400;
+        }
+
+    /*Icons Alignment*/
+    .input-group .icon {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        color: #888;
+        transform: translateY(-50%);
+        font-size: 20px;
+    }
+
+.agreeterms-box {
+    margin: -15px 0 15px;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
+
+.Already-Account-Link a {
+    font-size: 14.5px;
+    color: #7494ec;
+    text-decoration: none;
+}
+
+    .Already-Account-Link a:hover {
+        text-decoration: underline;
+        color: #333;
+    }
+
+/*Login button size and color */
+.btn {
+    width: 100%;
+    height: 48px;
+    background: #7494ec;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0, .1);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.container p {
+    font-size: 14.5px;
+    margin: 15px 0;
+}

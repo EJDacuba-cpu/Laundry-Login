@@ -1,0 +1,68 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LogIn.aspx.cs" Inherits="Laundry_Login.LogIn" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="Login.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+      <div class="container">
+
+            <div class="login-Box">
+                
+                <form id="Login" runat="server">
+                    <h1> WELCOME!</h1>
+                    <!-- Error Message -->
+                    <asp:Label ID="msg" runat="server"></asp:Label>
+
+                    <!--  -->
+                    <div class="input-group">
+                        <asp:TextBox ID="username" runat="server" CssClass="input" placeholder="Username"></asp:TextBox>
+                        <ion-icon class="icon" name="person-sharp"></ion-icon>
+                    </div>
+
+                    <div class="input-group">
+                        <asp:TextBox ID="password" runat="server" CssClass="input" TextMode="Password" placeholder="Password"></asp:TextBox>
+                        <ion-icon class="icon" name="lock-closed-sharp"></ion-icon>
+                    </div>
+
+                <!-- remember me checkbox & Forgot password link -->
+                    <div class="checkbox-forgotlink">
+                     <label class="checkbox">
+                         <asp:CheckBox ID="RememberBox" runat="server" />
+                        Remember Me 
+                    </label>     
+                        <a href="ForgotPassword.aspx" class="forgot">Forgot your password?</a>
+                    </div>
+
+                 
+                    <asp:Button ID="signin" CssClass="btn" runat="server" Text="Log In"/>
+
+
+                    <div class="Create-Account-Link">
+                        <p>Dont't have an Account? <a href="CreateAccount.aspx" class="signup">Create Account</a></p>
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <div class="left-container">
+                <div class="Logo-box">
+                    <h2>Press & Dry <br />
+                        Laundry Services</h2>
+                </div>
+
+            </div>
+        </div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

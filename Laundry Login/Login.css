@@ -1,0 +1,180 @@
+﻿/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(90deg, #e2e2e2, #c9d6ff);
+}
+
+/* MAIN CONTAINER */
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+    height: 500px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(0,0,0,.2);
+    overflow: hidden;
+    display: flex;
+}
+
+/* LEFT LOGO PANEL */
+.left-container {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.Logo-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #7494ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 150px;
+    border-bottom-left-radius: 150px;
+}
+
+/* Login Area */
+.login-Box {
+    width: 50%;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* Input */
+.input-group {
+    position: relative;
+    margin: 25px 0;
+}
+
+    .input-group input {
+        width: 100%;
+        padding: 13px 50px 13px 20px;
+        background: #eee;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+    }
+
+    .input-group .icon {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #888;
+        font-size: 20px;
+    }
+
+/* Checkboxtas forgot */
+.checkbox-forgotlink {
+    margin: -10px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .checkbox-forgotlink a {
+        font-size: 14.5px;
+        color: #7494ec;
+        text-decoration: none;
+    }
+
+        .checkbox-forgotlink a:hover {
+            text-decoration: underline;
+        }
+
+/* BUTTON */
+.btn {
+    width: 100%;
+    height: 48px;
+    background: #7494ec;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* CREATE ACCOUNT */
+.Create-Account-Link {
+    margin-top: 20px;
+}
+
+    .Create-Account-Link a {
+        color: #7494ec;
+        font-size: 14.5px;
+        text-decoration: none;
+    }
+
+        .Create-Account-Link a:hover {
+            text-decoration: underline;
+        }
+
+
+/*responsive fix powerd by chat gpt */
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-container {
+        width: 100%;
+        height: 200px;
+        position: relative;
+    }
+
+    .Logo-box {
+        border-radius: 0;
+        width: 100%;
+        height: 200px;
+    }
+
+    .login-Box {
+        width: 100%;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .container h1 {
+        font-size: 28px;
+    }
+
+    .input-group input {
+        font-size: 14px;
+    }
+
+    .btn {
+        height: 44px;
+        font-size: 15px;
+    }
+}
