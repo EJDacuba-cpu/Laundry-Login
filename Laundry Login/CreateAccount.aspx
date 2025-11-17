@@ -6,6 +6,7 @@
 <head runat="server">
     <title></title>
     <link href="createaccount.css" rel="stylesheet" />
+    <script src="validation.js"></script>
 </head>
 <body>
        <div class="container">
@@ -53,6 +54,13 @@
     </form>
           
         </div>
+                       <div class="right-panel">
+                <div class="Logo-box">
+                    <h2>Press & Dry <br />
+                        Laundry Services</h2>
+                </div>
+
+            </div>
     </div>
 
 

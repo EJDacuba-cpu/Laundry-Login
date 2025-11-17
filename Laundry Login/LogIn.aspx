@@ -15,7 +15,7 @@
             <div class="login-Box">
                 
                 <form id="Login" runat="server">
-                    <h1> WELCOME!</h1>
+                    <h1> Sign In!</h1>
                     <!-- Error Message -->
                     <asp:Label ID="msg" runat="server"></asp:Label>
 
@@ -44,7 +44,7 @@
 
 
                     <div class="Create-Account-Link">
-                        <p>Dont't have an Account? <a href="CreateAccount.aspx" class="signup">Create Account</a></p>
+                        <p>Don't have an Account? <a href="CreateAccount.aspx" class="signup">Create Account</a></p>
                     </div>
 
                 </form>
@@ -54,9 +54,17 @@
 
             <div class="left-container">
                 <div class="Logo-box">
-                    <h2>Press & Dry <br />
+                    <h2 class="Logo">Press & Dry <br />
                         Laundry Services</h2>
+
+            <div class="text-sci">
+                <br />
+                <h2> Welcome!</h2>
+                <p> nu gagasdas adasdasdsa adas dasdas dasdasdasdasdasdasdasdagddsfsdfsd </p>
+            </div>
+
                 </div>
+    
 
             </div>
         </div>

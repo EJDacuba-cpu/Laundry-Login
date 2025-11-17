@@ -183,6 +183,7 @@
     <Content Include="createaccount.css" />
     <Content Include="Site.Master" />
     <Content Include="forgopassword.css" />
+    <Content Include="validation.js" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
