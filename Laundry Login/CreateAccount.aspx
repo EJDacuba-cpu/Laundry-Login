@@ -12,7 +12,7 @@
        <div class="container">
         <div class="Signup-box">          
                 <form id="form1" runat="server">
-                    <h1> Let's create your account</h1>
+                    <h1> Sign Up</h1>
                     <asp:Label ID="messagetxt" runat="server"></asp:Label>
         <div class="input-group">
             <asp:TextBox ID="username" runat="server" placeholder="Username"></asp:TextBox>
@@ -26,11 +26,6 @@
                     <div class="input-group">
                         <asp:TextBox ID="password" runat="server"  placeholder="Password"></asp:TextBox>
                          <ion-icon class="icon" name="lock-closed-sharp"></ion-icon>
-                    </div>
-
-                    <div class="input-group">
-                        <asp:TextBox ID="confirmpassword" runat="server"  placeholder="Confirm Password"></asp:TextBox>
-                        <ion-icon class="icon" name="lock-closed-sharp"></ion-icon>
                     </div>
 
                     <div class="input-group">
@@ -54,10 +49,9 @@
     </form>
           
         </div>
-                       <div class="right-panel">
-                <div class="Logo-box">
-                    <h2>Press & Dry <br />
-                        Laundry Services</h2>
+                <div class="right-panel">
+                    <div class="Logo-box">
+                    <h2>Create your Account</h2>
                 </div>
 
             </div>

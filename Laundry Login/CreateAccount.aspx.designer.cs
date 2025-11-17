@@ -60,15 +60,6 @@ namespace Laundry_Login
         protected global::System.Web.UI.WebControls.TextBox password;
 
         /// <summary>
-        /// confirmpassword control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox confirmpassword;
-
-        /// <summary>
         /// contactnum control.
         /// </summary>
         /// <remarks>

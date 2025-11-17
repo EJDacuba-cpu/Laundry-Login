@@ -27,6 +27,7 @@ body {
     flex-direction: row;
     height: 500px;
     position: relative;
+
 }
 
 /* LEFT PANEL */
@@ -44,8 +45,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-bottom-right-radius: 150px;
-    border-top-right-radius: 150px;
+    border-bottom-right-radius: 120px;
+    border-top-right-radius: 120px;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
 }

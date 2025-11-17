@@ -8,51 +8,72 @@
 body {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
     min-height: 100vh;
+    padding: 20px;
     background: linear-gradient(90deg, #e2e2e2, #c9d6ff);
+    margin-top: 50px;
 }
 
+/*Main*/
 .container {
-    position: relative;
-    width: 850px;
-    height: 700px;
+    width: 100%;
+    max-width: 850px;
     background: #fff;
     border-radius: 30px;
     box-shadow: 0 0 30px rgba(0,0,0,.2);
-    overflow: hidden;
-    margin: 10px;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    position: relative;
 }
 
+/* right PANEL */
+.right-panel {
+    width: 50%;
+    height: 100%;
+}
+
+.Logo-box {
+    width: 100%;
+    height: 100%;
+    background: #7494ec;
+    color: #fff;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom-right-radius: 120px;
+    border-top-right-radius: 120px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+/* SIGN UP FORM BOX */
 .Signup-box {
     position: absolute;
     right: 0;
-    height: 100%;
     width: 50%;
-    display: flex;
-    align-items: center;
-    color: #333;
-    text-align: center;
+    height: 100%;
     padding: 40px;
-    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
-/*Ispasyo*/
-form {
-    width: 100%;
-}
-/*Login Text*/
+/* Create account text*/
 .container h1 {
     font-size: 36px;
-    margin: -10px 0;
-}
-/*Ispasyo between the username textbox and password textbox*/
-.input-group {
-    position: relative;
-    margin: 30px 0;
+    margin-bottom: 10px;
 }
 
-    /*for the input box align*/
+
+/* INPUT FIELD BOX */
+.input-group {
+    position: relative;
+    margin: 25px 0;
+}
     .input-group input {
         width: 100%;
         padding: 13px 50px 13px 20px;
@@ -61,158 +82,119 @@ form {
         border: none;
         outline: none;
         font-size: 16px;
-        color: #333;
-        font-weight: 500;
     }
-
-        .input-group input::placeholder {
-            color: #888;
-            font-weight: 400;
-        }
-
-    /*Icons Alignment*/
+    /* ICONS */
     .input-group .icon {
         position: absolute;
         right: 20px;
         top: 50%;
-        color: #888;
         transform: translateY(-50%);
         font-size: 20px;
+        color: #888;
     }
 
+
+/* TERMS AND CONDITON BOX */
 .agreeterms-box {
-    margin: -15px 0 15px;
-    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    margin: -10px 0 15px;
 }
 
-.Already-Account-Link a {
-    font-size: 14.5px;
-    color: #7494ec;
-    text-decoration: none;
-}
-
-    .Already-Account-Link a:hover {
-        text-decoration: underline;
-        color: #333;
-    }
-
-/*Login button size and color */
+/* SIGN UP BUTTON */
 .btn {
     width: 100%;
     height: 48px;
     background: #7494ec;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0, .1);
     border: none;
-    cursor: pointer;
-    font-size: 16px;
     color: #fff;
+    font-size: 16px;
     font-weight: 600;
+    cursor: pointer;
 }
 
-.container p {
-    font-size: 14.5px;
-    margin: 15px 0;
+
+.Already-Account-Link {
+    margin-top: 20px;
+}
+.Already-Account-Link a{
+    color: #7494ec;
+    text-decoration: none;
+}
+.Already-Account-Link a:hover{
+        text-decoration: underline;
+        color: #333;
 }
 
-    /* LEFT LOGO PANEL */
-.right-panel {
-    width: 50%;
-    height: 100%;
-    position: relative;
-}
-
-    .Logo-box {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: #7494ec;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        border-bottom-right-radius: 150px;
-        border-top-right-radius: 150px;
-        border-top-left-radius: 30px;
-        border-bottom-left-radius: 30px;
-    }
-
-
-/* ============================
-   RESPONSIVE DESIGN
-   ============================ */
-
-/* For tablets and small laptops */
-@media (max-width: 992px) {
-    .container {
-        width: 90%;
-        height: auto;
-    }
-
-    .Signup-box {
-        padding: 30px;
-    }
-
-    .container h1 {
-        font-size: 30px;
-    }
-}
-
-/* For phones (panel goes on top) */
-@media (max-width: 768px) {
-
-    body {
-        margin-top: 40px;
-    }
+@media (max-width: 900px) {
 
     .container {
-        width: 95%;
-        height: auto;
-        display: flex;
         flex-direction: column;
-    }
-
-    .right-panel,
-    .Signup-box {
-        width: 100%;
-        position: relative;
         height: auto;
     }
 
+    /* LOGO goes on top */
+    .right-panel {
+        width: 100%;
+        height: auto;
+        order: -1;
+    }
+
     .Logo-box {
-        border-radius: 0 0 30px 30px;
-        padding: 40px 20px;
+        padding: 40px;
+        border-radius: 0;
+        height: auto;
+    }
+
+    /* FORM becomes full width */
+    .Signup-box {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 30px;
+        right: 0;
+        text-align: center;
+    }
+}
+
+
+/* ===============================================
+   MOBILE PHONES (max-width: 500px)
+   =============================================== */
+@media (max-width: 500px) {
+
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .right-panel {
+        width: 100%;
+        order: -1;
+    }
+
+    .Logo-box {
+        padding: 25px;
+        border-radius: 0;
     }
 
     .Signup-box {
-        padding: 40px 20px;
-        margin-top: 10px;
+        padding: 25px;
+        width: 100%;
     }
 
     .container h1 {
         font-size: 28px;
     }
 
-    .btn {
-        height: 45px;
-    }
-}
-
-/* For very small phones */
-@media (max-width: 480px) {
-
     .input-group input {
         padding: 12px 45px 12px 15px;
-        font-size: 14px;
+        font-size: 15px;
     }
 
-    .Logo-box {
-        padding: 30px 10px;
-    }
-
-    .container h1 {
-        font-size: 24px;
+    .btn {
+        height: 45px;
+        font-size: 15px;
     }
 }
+
