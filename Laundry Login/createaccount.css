@@ -8,8 +8,7 @@
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 20px;
+    margin-top: 20px;
     min-height: 100vh;
     background: linear-gradient(90deg, #e2e2e2, #c9d6ff);
 }
@@ -17,42 +16,43 @@ body {
 .container {
     position: relative;
     width: 850px;
-    max-width: 100%;
-    height: auto;
+    height: 700px;
     background: #fff;
     border-radius: 30px;
     box-shadow: 0 0 30px rgba(0,0,0,.2);
     overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
+    margin: 10px;
 }
 
-/* RIGHT SIDE - SIGNUP */
 .Signup-box {
+    position: absolute;
+    right: 0;
+    height: 100%;
     width: 50%;
-    padding: 40px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 500px;
+    align-items: center;
+    color: #333;
+    text-align: center;
+    padding: 40px;
+    z-index: 1;
 }
 
+/*Ispasyo*/
 form {
     width: 100%;
 }
-
-/* Login Text */
+/*Login Text*/
 .container h1 {
     font-size: 36px;
     margin: -10px 0;
 }
-
-/* Input Groups */
+/*Ispasyo between the username textbox and password textbox*/
 .input-group {
     position: relative;
     margin: 30px 0;
 }
 
+    /*for the input box align*/
     .input-group input {
         width: 100%;
         padding: 13px 50px 13px 20px;
@@ -70,7 +70,7 @@ form {
             font-weight: 400;
         }
 
-    /* Icons */
+    /*Icons Alignment*/
     .input-group .icon {
         position: absolute;
         right: 20px;
@@ -80,12 +80,13 @@ form {
         font-size: 20px;
     }
 
-/* Terms */
 .agreeterms-box {
     margin: -15px 0 15px;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Already have an account */
 .Already-Account-Link a {
     font-size: 14.5px;
     color: #7494ec;
@@ -97,7 +98,7 @@ form {
         color: #333;
     }
 
-/* BUTTON */
+/*Login button size and color */
 .btn {
     width: 100%;
     height: 48px;
@@ -111,82 +112,107 @@ form {
     font-weight: 600;
 }
 
-/* LEFT LOGO PANEL */
+.container p {
+    font-size: 14.5px;
+    margin: 15px 0;
+}
+
+    /* LEFT LOGO PANEL */
 .right-panel {
     width: 50%;
-    height: auto;
-    min-height: 500px;
+    height: 100%;
     position: relative;
 }
 
-.Logo-box {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #7494ec;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    border-bottom-right-radius: 150px;
-    border-top-right-radius: 150px;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-}
-
-
-/* -------------------------
-      📱 RESPONSIVE PART
---------------------------*/
-
-/* Tablet */
-@media (max-width: 950px) {
-    .container {
-        height: auto;
-    }
-
-    .Signup-box, .right-panel {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-
     .Logo-box {
-        position: relative;
-        border-radius: 0;
-        height: 250px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #7494ec;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        border-bottom-right-radius: 150px;
+        border-top-right-radius: 150px;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+
+
+/* ============================
+   RESPONSIVE DESIGN
+   ============================ */
+
+/* For tablets and small laptops */
+@media (max-width: 992px) {
+    .container {
+        width: 90%;
+        height: auto;
     }
 
     .Signup-box {
         padding: 30px;
-        margin-top: 10px;
+    }
+
+    .container h1 {
+        font-size: 30px;
     }
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-    .container {
-        border-radius: 15px;
-        padding-bottom: 20px;
+/* For phones (panel goes on top) */
+@media (max-width: 768px) {
+
+    body {
+        margin-top: 40px;
     }
 
-        .container h1 {
-            font-size: 28px;
-        }
+    .container {
+        width: 95%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
 
-    .input-group input {
-        font-size: 14px;
-        padding: 12px 45px 12px 18px;
+    .right-panel,
+    .Signup-box {
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+
+    .Logo-box {
+        border-radius: 0 0 30px 30px;
+        padding: 40px 20px;
+    }
+
+    .Signup-box {
+        padding: 40px 20px;
+        margin-top: 10px;
+    }
+
+    .container h1 {
+        font-size: 28px;
     }
 
     .btn {
         height: 45px;
-        font-size: 15px;
+    }
+}
+
+/* For very small phones */
+@media (max-width: 480px) {
+
+    .input-group input {
+        padding: 12px 45px 12px 15px;
+        font-size: 14px;
     }
 
     .Logo-box {
-        height: 180px;
-        font-size: 22px;
-        border-radius: 0;
+        padding: 30px 10px;
+    }
+
+    .container h1 {
+        font-size: 24px;
     }
 }

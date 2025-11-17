@@ -41,7 +41,7 @@
                     <div class="agreeterms-box">
                      <label>
                          <asp:CheckBox ID="checkbox" runat="server" />
-                        I agree to terms in one condition
+                        I agree to the terms in condition
                     </label>   
                     </div>
 
