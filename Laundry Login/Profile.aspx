@@ -12,7 +12,7 @@
             <h2 class="fw-bold mb-0">Profile</h2>
             <small class="text-muted">Manage your User Profile</small>   
         </div>
-
+        <asp:Image ID="Image1" runat="server" />
         <div class="section-title">Profile Information</div>
 
         <!-- Profile Card -->

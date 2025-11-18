@@ -122,6 +122,7 @@
     <Content Include="favicon.ico" />
     <Content Include="ForgotPassword.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Img\Forget.jpg" />
     <Content Include="LogIn.aspx" />
     <Content Include="Login.css" />
     <Content Include="Profile.aspx" />

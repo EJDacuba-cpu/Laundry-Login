@@ -15,8 +15,9 @@
 
         <div class="Form">
 
-            <img src="Images/Forget.jpg" class="forgot-img" />
-
+            
+                <img src="Img/Forget.jpg" class="forgot-img" />
+                    
             <div class="Description">
                 <h2>Forgot Password?</h2>
                 <p>Don't worry! Resetting your password is easy, just type in the email you used to register at Press & Dry Laundry Services.</p>

@@ -15,8 +15,7 @@ body {
     font-size: 40px;
 }
     .myprofile .text-muted {
-        color: aqua;
-        
+        color: #3b82f6;
     }
 
 .section-title {
@@ -79,10 +78,10 @@ body {
     margin-top: 10px;
     font-size: 1rem;
     color: white;
-    background-color: aqua;
-    border-radius:20px;
+    background-color: #3b82f6;
+    border-radius: 20px;
     padding: 5px;
-    width: 100%;   
+    width: 100%;
 }
 
 
@@ -100,9 +99,11 @@ body {
 
 .col-right, .col-left{
 width:100%;
-margin-right: 20px;
-      
+margin-right: 20px;     
 }
+
+
+
 
 .input-group {
     width: 100%;
@@ -129,20 +130,20 @@ margin-right: 20px;
 }
 
 
- .profile-button {
-    display:flex;   
-   margin-top:auto;
+.profile-button {
+    display: flex;
+    margin-top: auto;
     width: 20%;
     height: 48px;
-    background-color: #0d6efd;
+    background-color: #3b82f6;
     color: white;
     border-radius: 10px;
     padding: 12px 30px;
     cursor: pointer;
     font-size: 1rem;
     text-decoration: none;
-    border: none;   
-   overflow:hidden;
+    border: none;
+    overflow: hidden;
 }
 
 
