@@ -10,24 +10,6 @@
 <body>
     <form id="form1" runat="server">
 
-    <!-- HEADER -->
-    <header>
-        <div class="Logo">
-            <h2>Press & Dry Laundry Services</h2>
-        </div>
-
-        <div class="LoginForm">
-            <asp:TextBox ID="txtLoginEmail" runat="server" CssClass="input" 
-                placeholder="Enter your Email" TextMode="Email"></asp:TextBox>
-
-            <asp:TextBox ID="txtLoginPassword" runat="server" CssClass="input" 
-                placeholder="Enter your Password" TextMode="Password"></asp:TextBox>
-
-            <asp:Button ID="btnSignIn" runat="server" Text="Sign In" CssClass="btn-signin" />
-        </div>
-    </header>
-
-
     <!-- MAIN CONTAINER -->
     <div class="container">
 
@@ -56,12 +38,6 @@
         </div>
 
     </div>
-
-
-    <!-- FOOTER -->
-    <footer>
-        <p>Press & Dry Laundry</p>
-    </footer>
 
 </form>
 </body>
