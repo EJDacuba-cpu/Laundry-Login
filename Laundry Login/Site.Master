@@ -1,69 +1,245 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Laundry_Login.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="Laundry_Login.SiteMaster" %>
 
 <!DOCTYPE html>
-
 <html lang="en">
 <head runat="server">
+    <title>PressN'Dry Dashboard</title>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+
+    <!-- Meta -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/bundles/modernizr") %>
-    </asp:PlaceHolder>
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <!-- Page-Specific Head Content -->
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
 
+    <style>
+        /* General Layout */
+        body, html {
+            height: 100%;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+
+        form {
+            height: 100%;
+        }
+
+        .top-navbar {
+            background-color: white;
+            border-bottom: 1px solid #dee2e6;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background-color: #fff;
+            border-right: 1px solid #dee2e6;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 1030;
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar .brand {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .sidebar h6 {
+            padding: 15px 20px 5px;
+            color: #888;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        .sidebar .nav-link {
+            color: #333;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-radius: 5px;
+            transition: all 0.2s ease;
+        }
+
+        .sidebar .nav-link:hover,
+        .sidebar .nav-link.active {
+            background-color: #e7f1ff;
+            color: #0d6efd;
+        }
+
+        .sidebar .user-info {
+            padding: 15px 20px;
+            border-top: 1px solid #f1f1f1;
+            background-color: #fafafa;
+        }
+
+        .sidebar .user-info img {
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        /* Overlay (for mobile) */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            z-index: 1020;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 250px;
+            padding: 30px;
+            transition: margin-left 0.3s ease;
+            min-height: 100vh;
+        }
+
+        /* Mobile View */
+        @media (max-width: 992px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+
+            .sidebar.active {
+                transform: translateX(0);
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 20px;
+            }
+
+            .overlay.active {
+                display: block;
+            }
+
+            .top-navbar {
+                display: flex;
+            }
+        }
+    </style>
 </head>
-<body>
-    <form runat="server">
-        <asp:ScriptManager runat="server">
-            <Scripts>
-                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
-                <%--Framework Scripts--%>
-                <asp:ScriptReference Name="MsAjaxBundle" />
-                <asp:ScriptReference Name="jquery" />
-                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
-                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
-                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
-                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
-                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
-                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
-                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
-                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
-                <asp:ScriptReference Name="WebFormsBundle" />
-                <%--Site Scripts--%>
-            </Scripts>
-        </asp:ScriptManager>
 
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" runat="server" href="~/">Application name</a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/About">About</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+
+        <!-- Mobile Navbar -->
+        <nav class="top-navbar d-lg-none">
+            <button id="menuToggle" type="button" class="btn btn-outline-primary">
+                <i class="bi bi-list"></i>
+            </button>
+            <span class="fw-bold text-primary">PressN'Dry</span>
         </nav>
-        <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
-            </footer>
-        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div>
+                <div class="brand">
+                    <i class="bi bi-geo-alt fs-4 text-primary"></i>
+                    <div>
+                        <strong>PressN'Dry</strong><br />
+                        <small class="text-muted">Laundry & Dry Clean</small>
+                    </div>
+                </div>
+
+                <h6>MANAGEMENT</h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a runat="server" id="dashboardLink" class="nav-link" href="AdminDashboard.aspx"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+                    <li class="nav-item"><a runat="server" id="ordersLink" class="nav-link" href="Orders.aspx"><i class="bi bi-bag"></i> Orders</a></li>
+                    <li class="nav-item"><a runat="server" id="customersLink" class="nav-link" href="Customers.aspx"><i class="bi bi-nut"></i> Customers</a></li>
+                    <li class="nav-item"><a runat="server" id="inventoryLink" class="nav-link" href="Inventory.aspx"><i class="bi bi-archive"></i> Inventory</a></li>
+                    <li class="nav-item"><a runat="server" id="machinesLink" class="nav-link" href="Machines.aspx"><i class="bi bi-nut"></i> Machines</a></li>
+                </ul>
+
+                <h6>COMMUNICATION</h6>
+                <ul class="nav flex-column mb-3">
+                    <li class="nav-item"><a runat="server" id="messagesLink" class="nav-link" href="Messages.aspx"><i class="bi bi-chat-left-dots"></i> Messages</a></li>
+                </ul>
+            </div>
+
+            <div class="user-info d-flex align-items-center justify-content-start px-3 py-3 border-top">
+                <a href="Profile.aspx" class="d-flex align-items-center text-decoration-none w-100" style="color: inherit;">
+                    <div class="position-relative me-2">
+                        <img src="img/pfp.jpg" runat="server"
+                             alt="Profile"
+                             class="rounded-circle border border-2 border-primary shadow-sm"
+                             width="36" height="36"
+                             style="object-fit: cover;" />
+                        <span class="bg-success position-absolute bottom-0 end-0 rounded-circle border border-white"
+                              style="width:8px; height:8px;"></span>
+                    </div>
+                    <div class="flex-grow-1">
+                        <strong class="d-block" style="font-size: 0.9rem;">Eric Dacuba</strong>
+                        <small class="text-muted">View Profile</small>
+                    </div>
+                    <i class="bi bi-chevron-right text-muted ms-2"></i>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Overlay -->
+        <div class="overlay" id="overlay"></div>
+
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+            <div class="container-fluid">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </main>
+
+        <!-- Bootstrap JS -->
+        <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Sidebar Toggle Script -->
+        <script>
+            const toggleBtn = document.getElementById('menuToggle');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', () => {
+                    sidebar.classList.toggle('active');
+                    overlay.classList.toggle('active');
+                });
+            }
+
+            if (overlay) {
+                overlay.addEventListener('click', () => {
+                    sidebar.classList.remove('active');
+                    overlay.classList.remove('active');
+                });
+            }
+        </script>
+
+    <asp:ContentPlaceHolder ID="Scripts" runat="server"></asp:ContentPlaceHolder>
     </form>
-    <asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/Scripts/bootstrap.js") %>
-    </asp:PlaceHolder>
 </body>
 </html>
