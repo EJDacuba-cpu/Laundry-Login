@@ -133,7 +133,7 @@
     <Content Include="Login.css" />
     <Content Include="practice.aspx" />
     <Content Include="Profile.aspx" />
-    <Content Include="profile.css" />
+    <Content Include="ProfileStyleSheet.css" />
     <Content Include="registration.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />

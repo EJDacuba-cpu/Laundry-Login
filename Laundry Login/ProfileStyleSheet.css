@@ -1,0 +1,192 @@
+﻿.main-content {
+    background-color: #f8f9fc;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.profile_picture {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0,0,0,.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    margin-bottom:20px;
+}
+
+.myprofile {
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+    .myprofile h2 {
+        font-size: 40px;
+        line-height: 0;
+        display:flex;
+           
+    }
+    .myprofile small {
+        color: #0088FF;
+    }
+
+
+
+.section-title {
+    font-size: 1.25rem; 
+    font-weight:600;
+   
+}
+
+
+/*PROFILE CARD*/
+.profile-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0,0,0,.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    margin-bottom:20px;
+}
+
+
+
+
+/* HEADER */
+.profile-header {
+    display: flex;
+    align-items: center; 
+    gap:20px;
+    padding-bottom: 20px;
+    width: 100%;
+    margin-top: 20px;
+    
+
+}
+
+ 
+    /* AVATAR */
+    .profile-avatar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+.Avatar {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #B1E5EF, #0088FF);
+    border-radius: 50%;
+}
+
+
+
+
+/*upload photo*/
+.profile-upload {
+    font-size: 0.95rem;
+    line-height: 2;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+
+/*upload photo button*/
+.upload_btn {
+    width: 80%;
+    height: 40px;
+    background: #ffffff;
+    border-radius: 8px;
+    background: #0088FF;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Profile Information */
+.profile-information {
+    width: 80%;
+    height: 100%;
+    padding: 30px;
+    flex-direction: column;
+}
+
+/* INPUT BOX */
+.input-group {
+    position: relative;
+    margin: 25px 0;
+
+}
+
+    .input-group input {
+        width: 100%;
+        padding: 13px 50px 13px 20px;
+        background: #eee;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+      
+    }
+
+    /*sa taas ng textbox*/
+.profile-details p {
+    margin: 8px 0;
+    display: flex;
+   
+}
+
+/*ICONS*/
+.label-row {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* espasyo sa pagitan ng text at icon */
+}
+    .label-row ion-icon {
+        font-size: 20px;
+        margin-bottom: 5px;    
+
+    }
+
+
+
+.profile-button {
+    width: 20%;
+    height: 40px;
+    background: #ffffff;
+    border-radius: 8px;
+    background: #0088FF;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.account_details {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0,0,0,.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+
+
+.Security {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0,0,0,.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
