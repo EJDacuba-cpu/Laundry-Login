@@ -1,90 +1,73 @@
 ﻿.main-content {
-    background-color: #f8f9fc;
+    background: linear-gradient(135deg, #eef7ff, #d4eaff);
     font-family: 'Poppins', sans-serif;
 }
 
+/* =================== PROFILE CARD BASE ========================= */
 
-.profile_picture {
+.profile_picture,
+.profile-card,
+.account_details_container,
+.preferences_container,
+.Security {
     background: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 0 30px rgba(0,0,0,.1);
-    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 140, 255, 0.12);
+    padding: 40px 50px;
     width: 100%;
     max-width: 900px;
-    margin: auto;
-    margin-bottom:20px;
+    margin: 20px auto;
 }
 
+
+/* =================== TITLE SECTION ======================= */
+.section-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+    color: #1B2B46;
+}
+
+
+/* =================== PROFILE HEADER ======================= */
 .myprofile {
-    max-width: 900px;
-    margin: auto;
+    text-align: left;
     margin-bottom: 20px;
 }
     .myprofile h2 {
-        font-size: 40px;
-        line-height: 0;
-        display:flex;
-           
-    }
-    .myprofile small {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #1B2B46;
+    }   
+.myprofile small {
         color: #0088FF;
+        margin-left:20px;
     }
 
-
-
-.section-title {
-    font-size: 1.25rem; 
-    font-weight:600;
-   
-}
-
-
-/*PROFILE CARD*/
-.profile-card {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 0 30px rgba(0,0,0,.1);
-    padding: 30px;
-    width: 100%;
-    max-width: 900px;
-    margin: auto;
-    margin-bottom:20px;
-}
-
-
-
-
-/* HEADER */
 .profile-header {
     display: flex;
-    align-items: center; 
-    gap:20px;
-    padding-bottom: 20px;
-    width: 100%;
-    margin-top: 20px;
-    
-
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
 }
 
- 
-    /* AVATAR */
-    .profile-avatar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-    }
+
+.profile-avatar span {
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    margin-top: 40px;
+}
 .Avatar {
     width: 120px;
     height: 120px;
     background: linear-gradient(135deg, #B1E5EF, #0088FF);
     border-radius: 50%;
+    margin-bottom: 10px;
+    
 }
 
-
-
-
-/*upload photo*/
+/*upload photo text*/
 .profile-upload {
     font-size: 0.95rem;
     line-height: 2;
@@ -93,100 +76,178 @@
     align-items:center;
 }
 
-
 /*upload photo button*/
 .upload_btn {
-    width: 80%;
+    width: 100%;
+    max-width: 150px;
     height: 40px;
-    background: #ffffff;
-    border-radius: 8px;
     background: #0088FF;
     color: #fff;
     border: none;
-    font-size: 15px;
-    font-weight: 600;
+    border-radius: 8px;
     cursor: pointer;
+    font-weight: 600;
+    margin-top: 10px;
 }
 
-/* Profile Information */
-.profile-information {
-    width: 80%;
-    height: 100%;
-    padding: 30px;
-    flex-direction: column;
-}
 
-/* INPUT BOX */
-.input-group {
-    position: relative;
-    margin: 25px 0;
 
-}
-
-    .input-group input {
-        width: 100%;
-        padding: 13px 50px 13px 20px;
-        background: #eee;
-        border-radius: 8px;
-        border: none;
-        outline: none;
-        font-size: 16px;
-      
-    }
-
-    /*sa taas ng textbox*/
-.profile-details p {
-    margin: 8px 0;
+/* =================== ACCOUNT INFORMATION ======================= */
+.two-column {
     display: flex;
-   
+    flex-wrap: wrap;
+    gap:20px;
 }
 
-/*ICONS*/
+.input-group {
+    flex: 1 1 calc(50% - 20px); /* 2 columns with gap */
+    display: flex;
+    flex-direction: column;  
+}
 .label-row {
     display: flex;
     align-items: center;
-    gap: 6px; /* espasyo sa pagitan ng text at icon */
+    gap: 10px;
+    margin-bottom: 5px;
+    
 }
-    .label-row ion-icon {
-        font-size: 20px;
-        margin-bottom: 5px;    
 
+
+/* INPUT GROUPS */
+.input-group {
+    display: flex;
+    flex-direction: column; 
+}
+    .input-group .label-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #2D3748;
+    }
+
+        .input-group .label-row ion-icon {
+            font-size: 20px;
+            color: #1a1a1a;
+        }
+
+input::placeholder {
+    color: #A0AEC0;
+}
+
+
+    .input-group input,
+    .input-group textarea,
+    .input-group asp\:TextBox {
+        width: auto;
+        padding: 12px 15px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        font-size: 15px;
+        outline: none;
+    }
+
+        .input-group input:focus,
+        .input-group textarea:focus,
+        .input-group asp\:TextBox:focus {
+            border-color: #0088FF;
+            box-shadow: 0 0 5px rgba(0,136,255,0.2);
+        }
+
+  /*email cannot be change */
+.email-note {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 3px;
+}
+
+
+/* =================== SAVE CHANGES BUTTON ======================= */
+.profile-button {
+    width: 100%;
+    max-width: 250px;
+    height: 50px;
+    background: #0088FF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 30px;
+    display: block;
+    margin-right: auto;
+    margin-left: 0;
+}
+
+    .changepass_button:hover, .profile-button:hover, .upload_btn:hover {
+        background-color: #0079E8;
     }
 
 
 
-.profile-button {
-    width: 20%;
-    height: 40px;
-    background: #ffffff;
+/* =================== SECURITY ======================= */
+.changepass_button {
+    width: 100%;
+    height: 50px;
     border-radius: 8px;
     background: #0088FF;
     color: #fff;
     border: none;
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    margin: 20px auto;
 }
 
-.account_details {
-    background: #ffffff;
+
+
+/* =================== ACCOUNT DETAILS ======================= */
+
+.two-col {
+    display: flex;
+    gap: 20px; /* spacing sa  columns */
+}
+
+.item {
+    flex: 1; /* pantay ng dalawang columns */
+}
+
+    .item label {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+
+    .item span {
+        position: center;
+        font-weight: bold;
+        color: #2D3748;
+    }
+
+.account_security_tips {
     border-radius: 12px;
-    box-shadow: 0 0 30px rgba(0,0,0,.1);
-    padding: 30px;
-    width: 100%;
-    max-width: 900px;
-    margin: auto;
-    margin-bottom: 20px;
+    background: #F2F6FF;
+    border: 1px solid #DCE8FF;
+    padding: 20px;
+    margin: 20px auto;
+}
+    .account_security_tips p {
+        color: #0047B3; 
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 12px;
+    }
+.Security_tips_title {
+    color: #0047B3; 
+    margin-bottom: 8px;
 }
 
-
-
-.Security {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 0 30px rgba(0,0,0,.1);
-    padding: 30px;
-    width: 100%;
-    max-width: 900px;
-    margin: auto;
+/* =================== RESPONSIVE ======================= */
+/* for smaller screens  */
+@media (max-width: 768px) {
+    .profile-card, .account_details_container, .preferences_container, .Security {
+        padding: 20px; 
+    }
 }
+

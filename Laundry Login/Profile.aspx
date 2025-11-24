@@ -35,81 +35,162 @@
                </div>
            </div>
 
-           <div class="profile-card">
+              <!-- Account Details -->
+<div class="account_details_container">
+    <div class="section-title">Account Details</div>
 
-                    <!-- Profile Information -->
-                   
-                    <div class="profile-information">
-                        <div class="section-title">Account Information</div>
+    <div class="two-col">
+        <div class="item">
+            <label>Account Type</label>
+            <span> Admin/User</span>
+        </div>
 
-                      <div class="input-group">
-                        <div class="label-row">
-                         <ion-icon name="person-outline"></ion-icon>   
-                         <p><strong>Username:</strong> <span><asp:Label ID="UsernameLabel" runat="server" /></span></p>
-                        </div>              
-                        <asp:TextBox ID="username"  placeholder="Your username" runat="server"></asp:TextBox>                     
-                     </div>
+        <div class="item">
+            <label>Created Account</label>
+            <span>Since Day One's</span>
+        </div>
+    </div>
+</div>
 
-                     <div class="input-group">
-                         <div class="label-row">
-                             <ion-icon name="person-outline"></ion-icon>
-                          <p><strong>Full Name:</strong> <span><%# User.Identity.Name %></span></p>                     
-                         </div>
-                        <asp:TextBox ID="fullname" placeholder="Your full name" runat="server"></asp:TextBox>
-                    </div>
-                    
-                 
-                        <div class="input-group">
-                            <div class="label-row">
-                                <ion-icon name="mail-outline"></ion-icon>
-                                <p><strong>Email Address:</strong> <span><asp:Label ID="EmailLabel" runat="server" /></span></p>
-                            </div>                            
-                             <asp:TextBox ID="emailaddress" placeholder="@gmail.com" runat="server"></asp:TextBox>
-                             <p class="email-note">Email cannot be changed</p>
-                        </div>
 
-                        <div class="input-group">
-                            <div class="label-row">
-                                <ion-icon name="call-outline"></ion-icon>
-                                <p><strong>Phone Number:</strong> <span><asp:Label ID="PhoneLabel" runat="server" /></span></p>
-                            </div>                            
-                             <asp:TextBox ID="phonenumber" placeholder="+63" runat="server"></asp:TextBox>                             
-                        </div>
 
-                        <div class="input-group">
-                            <div class="label-row">
-                                <ion-icon name="location-outline"></ion-icon>
-                              <p><strong>Default Address:</strong> <span><asp:Label ID="Label1" runat="server" /></span></p>
-                            </div>
-                             
-                             <asp:TextBox ID="delivery_addrss" placeholder="Your default pickup/delivery address" runat="server"></asp:TextBox>
-                        </div>
+<div class="profile-card">
 
-                          <!-- Edit Profile Button -->                                                    
-                      <asp:Button href="" ID="Button1"  runat="server" Text="Save Changes" CssClass="profile-button"/>
-                        </div>       
+    <div class="profile-information">
+        <div class="section-title">Account Information</div>
+
+        <div class="two-column">
+            <div class="input-group">
+                <div class="label-row">
+                    <ion-icon name="person-outline"></ion-icon>   
+                    <p><strong>Username:</strong> <span><asp:Label ID="UsernameLabel" runat="server" /></span></p>
+                </div>              
+                <asp:TextBox ID="username" placeholder="Your username" runat="server"></asp:TextBox>                     
+            </div>
+
+            <div class="input-group">
+                <div class="label-row">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <p><strong>Full Name:</strong> <span><%# User.Identity.Name %></span></p>                     
                 </div>
-      
-         <div class="account_details">
-                      <div class="section-title">Account Details</div>
-                      <p>(example)Account Type: admin </p>
-                       <p>Created account: 11/21/2025</p>
-                      <div class="details">
-               </div>
-       </div>
+                <asp:TextBox ID="fullname" placeholder="Your full name" runat="server"></asp:TextBox>
+            </div>
+
+            <div class="input-group">
+                <div class="label-row">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <p><strong>Email Address:</strong> <span><asp:Label ID="EmailLabel" runat="server" /></span></p>
+                </div>                            
+                <asp:TextBox ID="emailaddress" placeholder="@gmail.com" runat="server"></asp:TextBox>
+                <p class="email-note">Email cannot be changed</p>
+            </div>
+
+            <div class="input-group">
+                <div class="label-row">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <p><strong>Phone Number:</strong> <span><asp:Label ID="PhoneLabel" runat="server" /></span></p>
+                </div>                            
+                <asp:TextBox ID="phonenumber" placeholder="+63" runat="server"></asp:TextBox>                             
+            </div>
+
+            <div class="input-group">
+                <div class="label-row">
+                    <ion-icon name="location-outline"></ion-icon>
+                    <p><strong>Default Address:</strong> <span><asp:Label ID="Label1" runat="server" /></span></p>
+                </div>                             
+                <asp:TextBox ID="delivery_addrss" placeholder="Your default pickup/delivery address" runat="server"></asp:TextBox>
+            </div>
+
+        </div> <!-- End two-column -->
+
+                                        <!-- Edit Profile Button -->                                                    
+          
+               <asp:Button href="" ID="Button1"  runat="server" Text="Save Changes" CssClass="profile-button"/>
 
 
+    </div> <!-- End profile-information -->
+
+</div>
+
+
+           
+
+              <!-- Laundry preferences -->
+
+           <div class="preferences_container">
+                <div class="section-title">Laundry Preferences</div>
+                <div class="preference_info">
+                       <div class="input-group">
+                            <div class="label-row">                               
+                                <p><strong>Prefered Detergent</strong></p>
+                            </div>                            
+                             <asp:TextBox ID="detergentbox" placeholder="Tide,Ariel," runat="server"></asp:TextBox>                             
+                        </div>
+
+                    <p><asp:CheckBox ID="CheckBox" runat="server" Height="20px" Width="20px" /><strong> Use Fabric Softener</strong></p>
+
+                       <div class="input-group">
+                            <div class="label-row">                               
+                                <p><strong>Special Instructions</strong></p>
+                            </div>                            
+                             <asp:TextBox ID="instruction" placeholder="Any special care Instruction for your laundry?" runat="server"></asp:TextBox>                             
+                        </div>
+                             
+                </div>
+           </div>
+
+            <!-- security -->  
            <div class="Security">
-               <div class="section-title">Password & Security</div>
-               <p>Manage your password, login reference and recovery method </p>
+               <div class="section-title"><ion-icon name="shield-outline"></ion-icon>  Security</div>
+              
                <div class="security_info">
+                         <div class="input-group">
+                            <div class="label-row">
+                                <ion-icon name="lock-closed-outline"></ion-icon>
+                                <p><strong>Current Password</strong> <span><asp:Label ID="currentpass" runat="server" /></span></p>
+                            </div>                            
+                             <asp:TextBox ID="currentpassword" placeholder="Enter current password" runat="server"></asp:TextBox>                             
+                        </div>
+
+                         <div class="input-group">
+                            <div class="label-row">
+                                <ion-icon name="key-outline"></ion-icon>
+                                <p><strong>New Password</strong> <span><asp:Label ID="newpass" runat="server" /></span></p>
+                            </div>                            
+                             <asp:TextBox ID="newpassword" placeholder="Enter new password" runat="server"></asp:TextBox>                             
+                        </div>
+
+                         <div class="input-group">
+                            <div class="label-row">
+                                <ion-icon name="key-outline"></ion-icon>
+                                <p><strong>Confirm Password</strong> <span><asp:Label ID="confirmpass" runat="server" /></span></p>
+                            </div>                            
+                             <asp:TextBox ID="confirmpassword" placeholder="Confirm new password" runat="server"></asp:TextBox>                             
+                        </div>
+
+                          <asp:Button href="" ID="changepass_btn"  runat="server" Text="Change Password" CssClass="changepass_button"/>
+
+                   <div class="account_security_tips">
+                       <div class="Security_tips_title"><ion-icon name="shield-outline"></ion-icon> Account Security Tips</div>
+
+                       <p>• Use a strong, unique password</p>
+                       <p>• Never share your password with anyone</p>
+                       <p>• Change your password regularly</p>
+                       <p>• Log out from shared devices</p>
+
+                   </div>
+                   
+
+
+
+
 
                </div>
 
            </div>
 
 
-            </div>
+         
         </div>
     </div>
 
