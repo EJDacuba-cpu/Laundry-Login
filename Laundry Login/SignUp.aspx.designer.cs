@@ -11,7 +11,7 @@ namespace Laundry_Login
 {
 
 
-    public partial class WebForm1
+    public partial class SignUp
     {
 
         /// <summary>

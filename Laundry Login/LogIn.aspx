@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="Login.css" rel="stylesheet" />
+    <link href="login.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 
@@ -45,7 +45,7 @@
 
 
                     <div class="Create-Account-Link">
-                        <p>Don't have an Account? <a href="CreateAccount.aspx" class="signup">Create Account</a></p>
+                        <p>Don't have an Account? <a href="SignUp.aspx" class="signup">Create Account</a></p>
                     </div>
 
                 </form>

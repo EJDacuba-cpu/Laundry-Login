@@ -1,45 +1,53 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ForgotPassword.aspx.cs" Inherits="Laundry_Login.ForgotPassword" %>
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    <link href="forgopassword.css" rel="stylesheet" />
+    <title>Forgot Password - Press & Dry Laundry</title>
+    <link href="forgotpassword.css" rel="stylesheet" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <form id="form1" runat="server">
 
-    <!-- MAIN CONTAINER -->
-    <div class="container">
+        <!-- MAIN CONTAINER -->
+        <div class="container">
 
-        <div class="Form">
+            <!-- FORM BOX -->
+            <div class="Form">
 
-            
-                <img src="Img/Forget.jpg" class="forgot-img" />
+                <!-- IMAGE -->
+                <img src="Img/Forget.jpg" class="forgot-img" alt="Forgot Password Image" />
+
+                <!-- DESCRIPTION -->
+                <div class="Description">
                     
-            <div class="Description">
-                <h2>Forgot Password?</h2>
-                <p>Don't worry! Resetting your password is easy, just type in the email you used to register at Press & Dry Laundry Services.</p>
-            </div>
+                    <h2> Forgot Password?</h2>
+                    <p>
+                        Don't worry! Resetting your password is easy. Just type in the email you used to register at Press & Dry Laundry Services.
+                    </p>
+                </div>
 
-            <label for="txtResetEmail">Email:</label>
 
-            <asp:TextBox ID="txtResetEmail" runat="server" CssClass="input" 
-                placeholder="Enter your Email"></asp:TextBox>
+                <!-- ASP.NET EMAIL TEXTBOX -->
+                <asp:TextBox ID="txtResetEmail" runat="server" CssClass="input" 
+                    placeholder="Enter your Email" TextMode="Email"></asp:TextBox>
 
-            <asp:Button ID="btnResetPassword" runat="server" Text="Reset Password" CssClass="btn" />
+                <!-- RESET PASSWORD BUTTON -->
+                <asp:Button ID="btnResetPassword" runat="server" Text="Reset Password" CssClass="btn" />
 
-            <div class="rememberpass">
-                <p>Did you remember your password?
-                    <a href="Login.aspx">Sign In</a>
-                </p>
+                <!-- REMEMBER PASSWORD LINK -->
+                <div class="rememberpass">
+                    <p>
+                        Did you remember your password?
+                        <a href="Login.aspx">Sign In</a>
+                    </p>
+                </div>
+
             </div>
 
         </div>
 
-    </div>
-
-</form>
+    </form>
 </body>
 </html>
