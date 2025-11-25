@@ -7,10 +7,28 @@
     <title></title>
     <link href="login.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
 
+<script>
+    function showErrorMessage() {
+        var lbl = document.getElementById("<%= msg.ClientID %>");
+
+        // FADE-IN (remove hidden)
+        lbl.classList.remove("hidden");
+
+        // After 3 seconds → fade-OUT
+        setTimeout(function () {
+            lbl.classList.add("hidden");
+        }, 3000);
+    }
+</script>
+   
 </head>
 <body>
+    <div class="bubbles">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
       <div class="container">
 
             <div class="login-Box">
@@ -18,9 +36,12 @@
                 <form id="Login" runat="server">
                     <h1> Sign In!</h1>
                     <!-- Error Message -->
-                    <asp:Label ID="msg" runat="server"></asp:Label>
+                    <div class="error-container">
+                        <asp:Label ID="msg" CssClass="error-text hidden" runat="server" Visible="false"></asp:Label>
+                    </div>
+                    
 
-                    <!--  -->
+                    <!--LOGIN FORM  -->
                     <div class="input-group">
                         <asp:TextBox ID="username" runat="server" CssClass="input" placeholder="Username"></asp:TextBox>
                         <ion-icon class="icon" name="person-sharp"></ion-icon>
@@ -61,7 +82,8 @@
             <div class="text-sci">
                 <br />
                 <h2> Welcome!</h2>
-                <p> nu gagasdas adasdasdsa adas dasdas dasdasdasdasdasdasdasdagddsfsdfsd </p>
+                <p> Tamad ka ba at Walang Pangarap? 
+                    Ano pang ang Hinihintay mo Press and Dry Laundry na! </p>
             </div>
 
                 </div>
@@ -70,8 +92,9 @@
             </div>
         </div>
 
+
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
+   
 </body>
 </html>

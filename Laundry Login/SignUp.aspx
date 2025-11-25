@@ -8,6 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
+
+
+
+
 <body>
     <div class="container">
         <div class="Signup-box">
@@ -18,22 +22,22 @@
                 <asp:Label ID="messagetxt" runat="server" ForeColor="Red"></asp:Label>
 
                 <div class="input-group">
-                    <asp:TextBox ID="username" runat="server" placeholder="Username"></asp:TextBox>
+                    <asp:TextBox ID="txtUsername" runat="server" placeholder="Username"></asp:TextBox>
                     <ion-icon name="person-sharp" class="icon"></ion-icon>
                 </div>
 
                 <div class="input-group">
-                    <asp:TextBox ID="email" runat="server" placeholder="Email"></asp:TextBox>
+                    <asp:TextBox ID="txtEmail" runat="server" placeholder="Email"></asp:TextBox>
                     <ion-icon name="mail" class="icon"></ion-icon>
                 </div>
 
                 <div class="input-group">
-                    <asp:TextBox ID="password" TextMode="Password" runat="server" placeholder="Password"></asp:TextBox>
+                    <asp:TextBox ID="txtPassword" TextMode="Password" runat="server" placeholder="Password"></asp:TextBox>
                     <ion-icon name="lock-closed-sharp" class="icon"></ion-icon>
                 </div>
 
                 <div class="input-group">
-                    <asp:TextBox ID="contactnum" runat="server" placeholder="Contact Number"></asp:TextBox>
+                    <asp:TextBox ID="txtContact" runat="server" placeholder="Contact Number"></asp:TextBox>
                     <ion-icon name="call" class="icon"></ion-icon>
                 </div>
 
@@ -44,7 +48,7 @@
                     </label>
                 </div>
 
-                <asp:Button ID="signup" CssClass="btn" runat="server" Text="Sign Up" />
+                <asp:Button ID="signup" CssClass="btn" runat="server" Text="Sign Up" OnClick="signup_Click" />
 
                 <div class="Already-Account-Link">
                     <p>Already have an account?
@@ -56,7 +60,6 @@
 
         </div>
     </div>
-
     <!-- ICONS -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
