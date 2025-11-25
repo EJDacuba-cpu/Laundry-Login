@@ -129,6 +129,7 @@
     <Content Include="ForgotPassword.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Img\Forget.jpg" />
+    <Content Include="Img\wally.png" />
     <Content Include="LogIn.aspx" />
     <Content Include="login.css" />
     <Content Include="practice.aspx" />
